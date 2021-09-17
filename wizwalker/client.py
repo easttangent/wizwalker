@@ -402,11 +402,6 @@ class Client:
 
         await self.body.write_position(xyz)
 
-        if move_after:
-            await self.send_key(Keycode.D, 0.1)
-
-        if yaw is not None:
-            await self.body.write_yaw(yaw)
 
     async def patch_infinite_loading(self):
         """
